@@ -1,0 +1,77 @@
+graph TB
+    subgraph "👤 Client Layer"
+        A[Web Browser]
+        A1[Gradio UI]
+    end
+    
+    subgraph "🌐 API Gateway"
+        B[FastAPI]
+        B1[🛡️ Security Middleware]
+        B2[⏱️ Rate Limiting]
+        B3[✅ Input Validation]
+    end
+    
+    subgraph "🎯 LangGraph Orchestration"
+        C[Workflow Orchestrator]
+        C1[📊 State Management]
+        C2[🔄 Error Recovery]
+        C3[⭐ Quality Scoring]
+    end
+    
+    subgraph "🤖 AI Agents FREE Groq API"
+        D1[📈 Market Intelligence]
+        D2[🎯 Competitive Analysis]
+        D3[⚠️ Risk Assessment]
+        D4[💡 Strategic Advisor]
+    end
+    
+    subgraph "🛡️ Security Layer"
+        E1[Input Validation]
+        E2[Output Guardrails]
+        E3[Content Safety]
+    end
+    
+    subgraph "🆓 External Services"
+        F1[Groq API FREE]
+        F2[LangSmith FREE Tier]
+    end
+    
+    A --> A1
+    A1 --> B
+    B --> B1
+    B1 --> B2
+    B2 --> B3
+    B3 --> C
+    
+    C --> C1
+    C --> C2
+    C --> C3
+    
+    C --> D1
+    D1 --> D2
+    D2 --> D3
+    D3 --> D4
+    
+    D1 -.->|FREE API| F1
+    D2 -.->|FREE API| F1
+    D3 -.->|FREE API| F1
+    D4 -.->|FREE API| F1
+    
+    B3 --> E1
+    D4 --> E2
+    E2 --> E3
+    
+    C -.->|FREE Tracing| F2
+    
+    style A fill:#6366f1,stroke:#4f46e5,color:#fff
+    style B fill:#8b5cf6,stroke:#7c3aed,color:#fff
+    style C fill:#ec4899,stroke:#db2777,color:#fff
+    style D1 fill:#f59e0b,stroke:#d97706
+    style D2 fill:#f59e0b,stroke:#d97706
+    style D3 fill:#f59e0b,stroke:#d97706
+    style D4 fill:#f59e0b,stroke:#d97706
+    style E1 fill:#10b981,stroke:#059669
+    style E2 fill:#10b981,stroke:#059669
+    style E3 fill:#10b981,stroke:#059669
+    style F1 fill:#22c55e,stroke:#16a34a,color:#fff
+    style F2 fill:#22c55e,stroke:#16a34a,color:#fff
