@@ -71,7 +71,7 @@ SRIP deploys four specialized AI agents working in parallel to conduct deep mark
 ### Installation
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/srip-production-v2.git
+git clone https://github.com/E-Z1937/srip-production-v2.git
 cd srip-production-v2
 
 # Create virtual environment
@@ -392,8 +392,8 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) file for
 
 ## 📞 Support
 
-- **Issues:** [GitHub Issues](https://github.com/yourusername/srip-production-v2/issues)
-- **Email:** your.email@example.com
+- **Issues:** [GitHub Issues](https://github.com/E-Z1937/srip-production-v2/issues)
+- **Email:** eshaalzehramt@gmail.com
 
 ---
 
