@@ -6,13 +6,13 @@
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 > Production-grade multi-agent business intelligence system delivering comprehensive market analysis in 90-120 seconds.
-
+![SRIP Architecture](docs/diagrams/architecture.mmd)
 ---
 
 ## 🎯 Overview
 
 SRIP deploys four specialized AI agents working in parallel to conduct deep market research and generate actionable strategic insights. Built with LangGraph orchestration and powered by Groq's LLaMA 3.3 70B, SRIP delivers professional-quality business intelligence analysis.
-
+## 🏗️ System Architecture
 ### Key Features
 
 - 🤖 **Multi-Agent Architecture:** Four specialized autonomous agents (Market, Competitive, Risk, Strategic)
@@ -23,31 +23,20 @@ SRIP deploys four specialized AI agents working in parallel to conduct deep mark
 - 📈 **High Quality:** 88%+ average quality scores with 74% test coverage
 - 💰 **Zero Cost:** 100% free resources using Groq API free tier
 
----
+### System Flow
 
-## 🏗️ Architecture
-┌─────────────────────────────────────────┐
-│          Gradio Web Interface           │
-│     (Luxury Gold & Black Theme)         │
-└──────────────┬──────────────────────────┘
-│
-┌──────────▼──────────┐
-│  LangGraph Workflow │
-│   (Orchestration)   │
-└──────────┬──────────┘
-│
-┌──────────┼──────────┬─────────┐
-│          │          │         │
-┌───▼───┐  ┌──▼──┐  ┌───▼───┐ ┌──▼──┐
-│Market │  │Comp │  │ Risk  │ │Strat│
-│Intel  │  │Intel│  │Assess │ │Advis│
-└───┬───┘  └──┬──┘  └───┬───┘ └──┬──┘
-└─────────┴──────────┴────────┘
-│
-┌────▼────┐
-│Groq API │
-│LLaMA 3.3│
-└─────────┘
+**User Interface** → **LangGraph Orchestration** → **4 Specialized Agents** → **Groq API** → **Formatted Report**
+
+### Component Details
+
+| Layer | Components | Purpose |
+|-------|-----------|---------|
+| **Interface** | Gradio Web UI | User input, progress tracking, report display |
+| **Orchestration** | LangGraph Workflow | Agent coordination, state management |
+| **Agents** | Market, Competitive, Risk, Strategic | Specialized analysis domains |
+| **Infrastructure** | Base Agent + Groq API | Retry logic, caching, LLM inference |
+| **Validation** | Guardrails + Quality Validator | Content safety, quality scoring |
+| **Data** | Pydantic Models | Type safety, validation |
 
 ### Agent Responsibilities
 
@@ -57,7 +46,6 @@ SRIP deploys four specialized AI agents working in parallel to conduct deep mark
 | 🎯 **Competitive Intelligence** | Player profiles, market share, competitive positioning | 300+ words |
 | ⚠️ **Risk Assessment** | Market, competitive, technology, regulatory risks (scored 0-10) | 300+ words |
 | 💡 **Strategic Advisor** | Synthesis and 6-8 actionable recommendations | 200+ words |
-
 ---
 
 ## 🚀 Quick Start
